@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/busqueda.css" />
+    <link rel="icon" type="image/png" href="../images/2.png" />
+</head>
+
+<body id="body">
+    <header class="header">
+        <div class="header-top">
+
+        </div>
+        <nav class="menu">
+            <div>
+                Nombre:<input type="text" id="poke-name" name="pokemon-name"><input type="submit" value="Buscar" onclick="getName(event)"></form>
+                <select id="sort-menu">
+                        <option value="none-order">Ordenar:</option>
+                        <option value="a-z">A - Z</option>
+                        <option value="z-a">Z - A</option>
+                    </select>
+
+                <select id="types-menu" onChange="getType(this)">
+                        <option value="none-type">Tipo:</option>
+                        <option value="Bug">Bug</option>
+                        <option value="Dragon">Dragon</option>
+                        <option value="Electric">Electric</option>
+                        <option value="Fighting">Fighting</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Flying">Flying</option>
+                        <option value="Ghost">Ghost</option>
+                        <option value="Grass">Grass</option>
+                        <option value="Ground">Ground</option>
+                        <option value="Ice">Ice</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Poison">Poison</option>
+                        <option value="Psychic">Psychic</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Steel">Steel</option>
+                        <option value="Water">Water</option>
+                    </select>
+            </div>
+        </nav>
+        </br>
+    </header>
+    <section id="main">
+        <section class="contenedor-pokemons">
+            <div id="pokemons-caja" class='pokemons-panel'>
+
+            </div>
+        </section>
+    </section>
+    </br>
+    <footer id="footer">
+        <a id=logout href="../index.html">
+            <input type=image src="../images/BotonVolver.png" width="100" height="50" class="Boton_Volver"> </form>
+            </span>
+        </a>
+    </footer>
+    </section>
+    <script type="text/javascript" src="../data/pokemon/pokemon.js"></script>
+    <script type="text/javascript" src="../JS/busqueda.js"></script>
+</body>
+
+</html>

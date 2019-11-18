@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-top {
+    height: 120px;
+}
+
+#body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/fondo2.png");
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+#sort-menu,
+#types-menu {
+    -webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -webkit-margin-before: 0.6em;
+    -webkit-margin-after: 0.6em;
+    -webkit-margin-start: 0.6em;
+    -webkit-margin-end: 0.6em;
+    -moz-appearance: none;
+    /* Remove estilo padrão do FireFox */
+    appearance: none;
+    /* Remove estilo padrão do FireFox*/
+    background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+    /* Imagem de fundo (Seta) */
+    background-position: 218px center;
+    /*Posição da imagem do background*/
+    width: 250px;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 30px;
+    /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border: 1px solid #ddd;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-pokemons {
+    height: 70vh;
+    width: 70vw;
+    overflow: auto;
+    background-color: #A3C7FD;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
