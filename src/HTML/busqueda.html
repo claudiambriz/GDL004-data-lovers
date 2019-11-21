@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pokédex</title>
+
     <link rel="stylesheet" href="../CSS/busqueda.css" />
     <link rel="icon" type="image/png" href="../images/2.png" />
 </head>
@@ -21,14 +22,12 @@
         </div>
 
         <div class="nav2">
-            <div class="nombre">
+            <div class="nombre" aling="center">
                 Nombre:<input type="text" id="poke-name" class="caja-buscar" name="pokemon-name"><input type="submit" class="buscar" value="Buscar" onclick="getName(event)"></form>
 
-                <select id="sort-menu" class="ordenar">
-                        <option value="none-order">Ordenar:</option>
-                        <option value="a-z">A - Z</option>
-                        <option value="z-a">Z - A</option>
-                    </select>
+                <button type="button" id="evolucion" onclick="getEvolution()">Evolución</button>
+
+
 
                 <select id="types-menu" onChange="getType(this)" class="Tipo">
                         <option value="none-type">Tipo:</option>
@@ -46,7 +45,6 @@
                         <option value="Poison">Poison</option>
                         <option value="Psychic">Psychic</option>
                         <option value="Rock">Rock</option>
-                        <option value="Steel">Steel</option>
                         <option value="Water">Water</option>
                     </select>
             </div>
@@ -62,10 +60,9 @@
     </section>
     </br>
 
-    <div class="volver">
+    <div>
         <a id=logout href="../index.html">
-            <input type=image src="../images/BotonVolver.png" width="190" height="80" class="Boton_Volver"> </form>
-            </span>
+            <button type="button" class="Boton_Volver">Volver</button>
         </a>
 
     </div>

@@ -19,7 +19,7 @@ nav {
     display: flex;
     background-color: #2F6EB5;
     padding: .002%;
-    color: black
+    width: 100%;
 }
 
 .h1 {
@@ -27,7 +27,18 @@ nav {
 }
 
 .Boton_Volver {
-    margin-top: 0%;
-    display: flex;
-    margin-left: 45%;
+    background-color: #B9D2DF;
+    font-family: 'Pokemon';
+    font-size: 150%;
+    color: #434A54;
+    border-radius: 30px;
+    border: 1px solid #434A54;
+    width: 200px;
+    height: 52px;
+    left: 16px;
+    top: 176px;
+    margin-top: 4%;
+    margin-left: 3%;
+    line-height: 30px;
+    cursor: pointer;
 }

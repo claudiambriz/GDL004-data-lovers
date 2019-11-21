@@ -15,10 +15,10 @@ body {
 }
 
 nav {
-    display: flex;
     background-color: #2F6EB5;
     padding: .002%;
-    color: black
+    color: black;
+    width: 100%;
 }
 
 .fondo {

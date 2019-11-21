@@ -1,4 +1,4 @@
-# Pokédex
+# Data Lovers: Pokédex
 
 ## Índice
 
@@ -11,6 +11,26 @@
 * [7. Consideraciones técnicas](#7-consideraciones-técnicas)
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 
-***
+## **Resumen del Proyecto**
+
+
+### **Usuarios**
+
+
+##### **Historias de usuarios**
+
+
+### **Prototipo baja fidelidad**
+### **Prototipo alta fidelidad**
+
+
+### Testeos de usuarios 
+
+
+
+
+
+
+
 
 

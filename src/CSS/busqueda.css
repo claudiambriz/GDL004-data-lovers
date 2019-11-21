@@ -15,20 +15,34 @@ body {
 }
 
 nav {
-    display: flex;
     background-color: #2F6EB5;
     padding: .002%;
-    color: black
 }
 
 .nav2 {
+    margin-top: 1%;
     justify-content: center;
-    margin-left: 32%;
+    text-align: center;
 }
 
 #main {
     display: flex;
     justify-content: center;
+}
+
+#evolucion {
+    background: #B9D2DF;
+    font-family: 'Pokemon';
+    font-size: 80%;
+    color: #434A54;
+    border-radius: 30px;
+    border: 1px solid gray;
+    width: 200px;
+    height: 52px;
+    left: 16px;
+    top: 176px;
+    line-height: 30px;
+    cursor: pointer;
 }
 
 .menu {
@@ -39,36 +53,43 @@ nav {
 .nombre {
     font-family: "Pokemon";
     font-size: 200%;
+    color: #434A54;
 }
 
 .caja-buscar {
-    width: 150px;
-    height: 40px;
+    background-color: whitesmoke;
+    font-family: 'Pokemon';
+    color: #434A54;
+    font-size: 25px;
+    width: 200px;
+    height: 52px;
+    border-radius: 10px;
 }
 
 .buscar {
     font-family: "Pokemon";
     font-size: 50%;
-    background-color: #2F6EB5;
+    color: #434A54;
+    background-color: #B9D2DF;
+    border-radius: 30%;
 }
 
 .Tipo {
+    background: linear-gradient(to bottom, #B9D2DF, #B9D2DF 100%);
+    font-family: 'Pokemon';
     font-size: 70%;
-    font-family: "Pokemon";
+    text-align: justify;
+    color: #434A54;
+    border-radius: 30px;
+    border: 1px solid gray;
     width: 150px;
-    height: 60px;
-    background-color: #2F6EB5;
+    height: 52px;
+    left: 5%;
+    top: 10%;
+    line-height: 25px;
+    cursor: pointer;
 }
 
-.ordenar {
-    font-size: 70%;
-    font-family: "Pokemon";
-    width: 150px;
-    height: 60px;
-    background-color: #2F6EB5;
-}
-
-.sort-menu,
 .types-menu {
     -webkit-appearance: none;
     -webkit-margin-before: 0.6em;
@@ -88,7 +109,7 @@ nav {
     height: 70vh;
     width: 70vw;
     overflow: auto;
-    background-color: #2F6EB5;
+    background-color: #FEFD00;
     border-radius: 0 0 10px 10px;
     display: flex;
     justify-content: center;
@@ -96,7 +117,30 @@ nav {
 }
 
 .Boton_Volver {
-    margin-top: 2%;
-    display: flex;
+    background-color: #B9D2DF;
+    font-family: 'Pokemon';
+    font-size: 150%;
+    color: #434A54;
+    border-radius: 30px;
+    border: 1px solid #434A54;
+    width: 200px;
+    height: 52px;
+    left: 16px;
+    top: 176px;
+    margin-top: 4%;
     margin-left: 45%;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.pokemons-panel {
+    display: flex;
+    align-self: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pokemon-item {
+    flex-grow: 3;
+    background-color: #FEFD00;
 }

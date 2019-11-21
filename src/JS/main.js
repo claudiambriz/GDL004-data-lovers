@@ -18,12 +18,15 @@ function renderPokemon(anyArray) {
   `).join("")}
       `
   }
-  
+
+
   function getName(event) {
     event.preventDefault();
     var name = document.getElementById("poke-name").value;
     var pokemon = pokemons.find(element => {
-        return element.name == name;
+         return element.name.includes(name);    
+         //return element.name.includes(name);
+         //return element.name == name;
     })
     renderPokemon([pokemon])
         /*var elemImg = document.createElement("img");
@@ -36,7 +39,9 @@ function renderPokemon(anyArray) {
 function getType(sel) {
     var type = sel.options[sel.selectedIndex].text
     var pokemonType = pokemons.filter(element => {
-        return element.type == type;
+     return element.type.includes(type);
     })
     renderPokemon(pokemonType)
 }
+
+//onchange
