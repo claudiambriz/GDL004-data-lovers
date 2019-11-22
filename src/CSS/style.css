@@ -1,55 +1,55 @@
-@font-face {
-    font-family: "Pokemon";
-    src: url("../images/Pokemon Solid.ttf");
-}
-
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-body {
-    background-image: url("../images/fondo.png");
-    background-repeat: no-repeat;
-}
-
-nav {
-    background-color: #2F6EB5;
-    padding: .002%;
-    color: black;
-    width: 100%;
-}
-
-.fondo {
-    background-size: cover;
-    background-position: center top;
-    display: flex;
-}
-
-h1 {
-    margin-top: 0%;
-    padding: -2%;
-    text-align: center;
-    font-family: "Pokemon";
-    font-size: %;
-    color: #434A54;
-}
-
-.Busqueda {
-    margin-left: %;
-    margin-right: %;
-    margin: %;
-}
-
-.Todos {
-    margin: %;
-}
-
-.Botones {
-    width: 50%;
-    margin-top: 15%;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 25%;
-}
+    @font-face {
+        font-family: "Pokemon";
+        src: url("../images/Pokemon Solid.ttf");
+    }
+    
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-image: url("../images/fondo.png");
+        background-repeat: no-repeat;
+    }
+    
+    nav {
+        background-color: #2F6EB5;
+        padding: .002%;
+        color: black;
+        width: 100%;
+    }
+    
+    .fondo {
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+    }
+    
+    h1 {
+        margin-top: 0%;
+        padding: -2%;
+        text-align: center;
+        font-family: "Pokemon";
+        font-size: %;
+        color: #434A54;
+    }
+    
+    .Busqueda {
+        margin-left: %;
+        margin-right: %;
+        margin: %;
+    }
+    
+    .Todos {
+        margin: %;
+    }
+    
+    .Botones {
+        width: 50%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25%;
+    }

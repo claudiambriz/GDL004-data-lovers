@@ -2,6 +2,8 @@ window.onload = function() {
     renderPokemon(pokemons);
 };
 
+//Mostrar todos los pokémons//
+
 function renderPokemon(anyArray) {
     let pokemonsDiv = document.getElementById("pokemons-caja");
     pokemonsDiv.innerHTML = `
@@ -13,12 +15,15 @@ function renderPokemon(anyArray) {
         </div>
         <div class="text-number">
         <p>${pokemon["num"]}</p>
+        <p>${pokemon["height"]}</p>
+        <p>${pokemon["weight"]}</p>
         </div>
     </div>
   `).join("")}
       `
   }
 
+//Búsqueda por nombre//
 
   function getName(event) {
     event.preventDefault();
@@ -35,6 +40,10 @@ function renderPokemon(anyArray) {
         resultsDiv.appendChild(elemImg);
         */
 }
+
+
+
+//Filtrar por Tipo//
 
 function getType(sel) {
     var type = sel.options[sel.selectedIndex].text

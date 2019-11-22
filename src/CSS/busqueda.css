@@ -64,6 +64,7 @@ nav {
     width: 200px;
     height: 52px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .buscar {
