@@ -1,7 +1,12 @@
-/* Manejo de data */
+//Filtrar por Tipo//
 
-// esta es una función de ejemplo
-
-export const example = () => {
-  return 'example';
-};
+export function getType(sel, evento) {
+    let pokemonType = sel.filter(element => {
+        for (let i = 0; i < element.type.length; i++) {
+            if (element.type[i] === evento) {
+                return element
+            }
+        }
+    })
+    return pokemonType
+}
