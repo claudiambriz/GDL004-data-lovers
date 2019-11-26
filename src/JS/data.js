@@ -10,3 +10,17 @@ export function getType(sel, evento) {
     })
     return pokemonType
 }
+
+//Búsqueda por nombre//
+
+export function getName(pokemons, event) {
+    //event.preventDefault();
+    //let name = document.getElementById("poke-name").value;
+    console.log(event)
+    let pokemon = pokemons.filter(element => {
+        return element.name.includes(event);
+
+    })
+    return pokemon
+        //renderPokemon([pokemon])
+}

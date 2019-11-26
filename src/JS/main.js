@@ -1,9 +1,5 @@
-// window.onload = function() {
-//     console.log(pokemons)
-//     renderPokemon(pokemons);
-// };
 import pokemons from '../data/pokemon/pokemon.js';
-import { getType } from './data.js';
+import { getType, getName } from './data.js';
 
 renderPokemon(pokemons)
 
@@ -12,9 +8,19 @@ const x = (event) => {
     renderPokemon(typeArray)
 }
 
+const busquedaPorNombre = (event) => {
+    console.log("siiiiiiiii")
+    let typeArray = getName(pokemons, event);
+    renderPokemon(typeArray)
+}
+
 document.getElementById("types-menu").addEventListener('change', (e) => x(e.target.value))
 
-//Mostrar todos los pokémons//
+document.getElementsByName("pokemon-name")[0].addEventListener('change', (e) => busquedaPorNombre(e.target.value))
+
+
+document.getElementById("buscar-pokemon-button").addEventListener('click', (e) => busquedaPorNombre(e.target.value))
+    //Mostrar todos los pokémons//
 
 function renderPokemon(anyArray) {
     let pokemonsDiv = document.getElementById("pokemons-caja");
@@ -35,8 +41,10 @@ function renderPokemon(anyArray) {
       `
   }
 
-//Búsqueda por nombre//
 
+
+  
+/*/Búsqueda por nombre//
 
   function getName(event) {
     event.preventDefault();
@@ -46,9 +54,7 @@ function renderPokemon(anyArray) {
        
     })
     renderPokemon([pokemon])
-}
-
-
+}*/
 
 /*/Filtrar por Tipo//
 
@@ -62,6 +68,7 @@ function getType(sel) {
 
 // Función añadida por Claudia Ambriz para buscar 
 // las evoluciones de un pokémon en base a su nombre
+
 function getEvolution() {
 
     let name = document.getElementById("poke-name").value;
