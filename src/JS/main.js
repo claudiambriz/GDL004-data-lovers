@@ -1,5 +1,5 @@
 import pokemons from '../data/pokemon/pokemon.js';
-import { getType, getName } from './data.js';
+import { getType, getName, getEvolution} from './data.js';
 
 renderPokemon(pokemons)
 
@@ -14,13 +14,24 @@ const busquedaPorNombre = (event) => {
     renderPokemon(typeArray)
 }
 
+// const busquedaPorNombre = (event) => {
+//     let typeArray = getEvolution(pokemons, event);
+//     renderPokemon(typeArray)
+// }
+
+
 document.getElementById("types-menu").addEventListener('change', (e) => x(e.target.value))
 
 document.getElementsByName("pokemon-name")[0].addEventListener('change', (e) => busquedaPorNombre(e.target.value))
 
+document.getElementById("evolucion").addEventListener('click', evolution)
 
-document.getElementById("buscar-pokemon-button").addEventListener('click', (e) => busquedaPorNombre(e.target.value))
+//document.getElementById("buscar-pokemon-button").addEventListener('click', (e) => busquedaPorNombre(e.target.value))
     //Mostrar todos los pokémons//
+
+
+
+
 
 function renderPokemon(anyArray) {
     let pokemonsDiv = document.getElementById("pokemons-caja");
@@ -69,67 +80,34 @@ function getType(sel) {
 // Función añadida por Claudia Ambriz para buscar 
 // las evoluciones de un pokémon en base a su nombre
 
-function getEvolution() {
-
+  function evolution() {
+// console.log('en getEvolution')
     let name = document.getElementById("poke-name").value;
+    let pokemonEvolution = getEvolution(pokemons, name);
+    console.log(pokemonEvolution)
+    renderPokemon(pokemonEvolution)
+
+  }
+//      // 1.- Encontramos el pokémon que estamos buscando
+//      let pokemon = pokemons.find(element => {
+//          return element.name.includes(name);    
+//      })
     
-    // 1.- Encontramos el pokémon que estamos buscando
-    let pokemon = pokemons.find(element => {
-        return element.name.includes(name);    
-    })
-    
-    let pokemon_evolutions = []; // Nuevo arreglo para guardar los pokémons de las evoluciones
+//      let pokemon_evolutions = []; // Nuevo arreglo para guardar los pokémons de las evoluciones
   
-    // 2.- Nos traemos la lista de evoluciones desde el pokémon seleccionado
-    // generando un nuevo objeto pokémon por cada evolución (forEach)
-    pokemon.next_evolution.forEach(element => {
-        evolution_name = element.name;  // Guardamos el nombre de la evolución en esta variable
+//     // 2.- Nos traemos la lista de evoluciones desde el pokémon seleccionado
+//     // generando un nuevo objeto pokémon por cada evolución (forEach)
+//      pokemon.next_evolution.forEach(element => {
+//         let evolution_name = element.name;  // Guardamos el nombre de la evolución en esta variable
         
-        // 2.1.- encontramos el pokemon en base al nombre de la evolución 
-        let pokemon_evolution = pokemons.find(element => {
-            return element.name.includes(evolution_name);
-        })
-        // alert("Adding evolution to new array pokémon_evolutions: " + pokémon_evolution.name)
-        
-        //3.- agregamos el pokémon encontrado a la lista de evoluciones pokémon_evolutions
-        pokemon_evolutions.push(pokemon_evolution);
-    });
-
-<<<<<<< HEAD
-// Función añadida por Claudia Ambriz para buscar 
-// las evolciones de un pokemon en base a su nombre
-function getEvolution() {
-
-    let name = document.getElementById("poke-name").value;
-    
-    // 1.- Encontramos el pokemon que estamos buscando
-    let pokemon = pokemons.find(element => {
-        return element.name.includes(name);    
-    })
-    
-    let pokemon_evolutions = []; // Nuevo arreglo para guardar los pokemons de las evoluciones
-  
-    // 2.- Nos traemos la lista de evoluciones desde el pokemon seleccionado
-    // generando un nuevo objeto pokemon por cada evolución (forEach)
-    pokemon.next_evolution.forEach(element => {
-        evolution_name = element.name;  // Guardamos el nombre de la evolución en esta variable
-        
-        // 2.1.- encontramos el pokemon en base al nombre de la evolución 
-        var pokemon_evolution = pokemons.find(element => {
-            return element.name.includes(evolution_name);
-        })
-        // alert("Adding evolution to new array pokemon_evolutions: " + pokemon_evolution.name)
-        
-        //3.- agregamos el pokemon encontrado a la lista de evoluciones pokemon_evolutions
-        pokemon_evolutions.push(pokemon_evolution);
-    });
-
-    //pintamos en el HTML (pantalla) la lista de los pokemones evolución del pokemon que buscamos
-    renderPokemon(pokemon_evolutions)
-}
-//onchange
-=======
-    //pintamos en el HTML (pantalla) la lista de los pokemones evolución del pokemon que buscamos
-    renderPokemon(pokemon_evolutions)
-}
->>>>>>> aa6a766a76fcd4960529898fbd5bed01c598bf68
+//         // 2.1.- encontramos el pokemon en base al nombre de la evolución 
+//          let pokemon_evolution = pokemons.find(element => {
+//              return element.name.includes(evolution_name);
+//          })
+//          // alert("Adding evolution to new array pokémon_evolutions: " + pokémon_evolution.name)
+//          //3.- agregamos el pokémon encontrado a la lista de evoluciones pokémon_evolutions
+//         return pokemon_evolutions.push(pokemon_evolution);
+//      });
+// //     //pintamos en el HTML (pantalla) la lista de los pokemones evolución del pokemon que buscamos
+//     renderPokemon(pokemon_evolutions)
+//  }
