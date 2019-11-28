@@ -14,13 +14,27 @@ export function getType(sel, evento) {
 //Búsqueda por nombre//
 
 export function getName(pokemons, event) {
-    //event.preventDefault();
-    //let name = document.getElementById("poke-name").value;
-    console.log(event)
     let pokemon = pokemons.filter(element => {
         return element.name.includes(event);
 
     })
     return pokemon
-        //renderPokemon([pokemon])
+}
+
+//Evolución//
+
+export function getEvolution(pokemons, name) {
+    let pokemon = pokemons.find(element => {
+        return element.name.includes(name);
+    })
+    let pokemon_evolutions = [];
+    pokemon.next_evolution.forEach(element => {
+        let evolution_name = element.name;
+        let pokemon_evolution = pokemons.find(element => {
+            return element.name.includes(evolution_name);
+        })
+        pokemon_evolutions.push(pokemon_evolution);
+    });
+    return pokemon_evolutions;
+
 }
