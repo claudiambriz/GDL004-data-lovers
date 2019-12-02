@@ -1,13 +1,23 @@
-// importamos la función `example`
-import { example } from "../src/data";
+// importamos la función `getName y getEvolution`
+import {getName, getEvolution} from '../src/JS/data.js';
+import pokemons from '../src/data/pokemon/pokemon';
 
-describe('example', () => {
-
+describe('getName', () => {
   it('debería ser una función', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof getName).toBe('function');
   });
 
-  describe('example', () => {
-    // escribe aquí tu test
+  it('Al ingresar Pikachu me regrese Pikachu(name)', ()=> {
+    expect(getName(pokemons, 'Pikachu')[0].name).toBe('Pikachu');
+  });
+});
+
+describe('getEvolution', () => {
+  it('debería ser una función', () => {
+    expect(typeof getEvolution).toBe('function');
+  });
+
+  it('Al ingresar Pikachu me regrese Raichu(name)', ()=> {
+    expect(getEvolution(pokemons, 'Pikachu')[0].name).toBe('Raichu');  
   });
 });
